@@ -1,0 +1,120 @@
+:root{
+    --primary:#ECF2FF;
+    --secondary:rgb(62, 84, 172);
+    --col3:#655DBB;
+    --col4:#BFACE2;
+    --font:#010101;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--font);
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 100%;
+}
+.article-layout .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 5rem;
+}
+.article-left{
+    width: 75%;
+    /* background-color:blueviolet; */
+}
+.heading{
+    margin-left: 1.5em;
+}
+.heading p{
+    opacity: 0.5;
+}
+.cards{
+    display: flex;
+    width: 100%;
+    margin-top: 2em;
+    margin-left: 3em;
+}
+.card{
+    width: 28%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    display: block;
+    padding: 0.5em;
+    margin-right: 2em;
+}
+.card-icon img{
+    width: 100%;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-icon{
+    position: relative;
+}
+.card-icon h3{
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 5%;
+    color: var(--primary);
+}
+
+.card-content{
+    padding: 0 1em;
+}
+.card-content p a{
+    color: var(--primary);
+}
+.card-content p{
+    opacity: 0.5;
+}
+
+@media screen and (max-width:600px){
+    body{
+        width: 100%;
+    }
+    
+    .article-layout .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .article-left, .article-right{
+        width: 90%;
+        margin-top: 2em;
+    }
+    .cards{
+        display: block;
+    }
+    .card{
+        width: 80%;
+        margin-top: 2em;
+    }
+    .card-content p{
+        display: none;
+    }
+    .lesson-article a{
+    }
+}
